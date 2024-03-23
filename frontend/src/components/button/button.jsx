@@ -1,9 +1,10 @@
 import React from "react";
 
-export default function Button({ icon, title }) {
+export default function Button({ icon, title, style }) {
   return (
     <div
       style={{
+        ...style,
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
