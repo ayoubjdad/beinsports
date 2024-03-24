@@ -1,19 +1,22 @@
 import React from "react";
 import Button from "../../components/button/button";
-import styles from "./section_header.module.scss";
+import styles from "./SectionHeader.module.scss";
 
 export default function SectionHeader({
   background,
   competitionLogo,
   title,
   buttonText,
+  style,
 }) {
   return (
     <div
       className={styles.container}
       style={{
+        ...style,
         backgroundImage: `url(${background})`,
         color: !background && "black",
+        marginBottom: !buttonText && "0px",
       }}
     >
       <div className={styles.title_container}>
@@ -26,10 +29,12 @@ export default function SectionHeader({
         )}
         <span className={styles.title}>{title}</span>
       </div>
-      <Button
-        icon={<i className="fi fi-rr-arrow-small-left" />}
-        title={buttonText || "المزيد"}
-      />
+      {buttonText && (
+        <Button
+          icon={<i className="fi fi-rr-arrow-small-left" />}
+          title={buttonText}
+        />
+      )}
     </div>
   );
 }

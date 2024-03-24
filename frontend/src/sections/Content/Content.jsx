@@ -1,36 +1,34 @@
 import React from "react";
-import SectionHeader from "../../layouts/section_header/section_header";
+import SectionHeader from "../../layouts/SectionHeader/SectionHeader";
 import MainNewsSection from "../MainNewsSection/MainNewsSection";
 import Carousel from "../Carousel/Carousel";
 import SideNewsletter from "../Newsletters/SideNewsletter";
+import styles from "./Content.module.scss";
+import Tags from "../Tags/Tags";
 
 export default function Content() {
   return (
-    <div
-      style={{
-        display: "grid",
-        gridTemplateColumns: "4fr 2fr",
-        margin: "16px auto",
-        maxWidth: "80%",
-        gap: "20px",
-        background: "#ffffff",
-      }}
-    >
-      <div
-        style={{
-          boxShadow: "rgba(145, 158, 171, 0.16) 0px 12px 24px -4px",
-        }}
-      >
-        <MainNewsSection />
-        <Carousel />
-        <MainNewsSection />
+    <div className={styles.container}>
+      <div className={styles.newsContainer}>
+        <Tags headerTitle={"مسابقات"} />
+        <MainNewsSection
+          headerBackground={
+            "https://prod-media.beinsports.com/image/default_banner.png"
+          }
+          headerTitle={"أهم الأخبار اليومية"}
+          headerButtonText={"المزيد"}
+        />
+        <Carousel headerTitle={"أهم الأخبار اليومية"} />
+        <MainNewsSection
+          headerBackground={
+            "https://prod-media.beinsports.com/image/default_banner.png"
+          }
+          headerTitle={"أهم الأخبار اليومية"}
+          headerButtonText={"المزيد"}
+        />
       </div>
       <div>
-        <div
-          style={{
-            boxShadow: "rgba(145, 158, 171, 0.16) 0px 12px 24px -4px",
-          }}
-        >
+        <div className={styles.sectionContainer}>
           <SectionHeader
             background={
               "https://prod-media.beinsports.com/image/4oogyu6o156iphvdvphwpck10_banner.png"
@@ -42,7 +40,7 @@ export default function Content() {
           />
           <SideNewsletter />
         </div>
-        <div>
+        <div className={styles.sectionContainer}>
           <SectionHeader
             background={
               "https://prod-media.beinsports.com/image/4oogyu6o156iphvdvphwpck10_banner.png"

@@ -1,12 +1,22 @@
 import React from "react";
 import CarouselNews from "../../layouts/news/CarouselNews";
 import styles from "./Carousel.module.scss";
-import SectionHeader from "../../layouts/section_header/section_header";
+import SectionHeader from "../../layouts/SectionHeader/SectionHeader";
 
-export default function Carousel() {
+export default function Carousel({
+  headerBackground,
+  headerTitle,
+  headerButtonText,
+}) {
   return (
     <>
-      <SectionHeader title={"دوري أبطال أوروبا - كل الأخبار"} />
+      {headerTitle && (
+        <SectionHeader
+          background={headerBackground}
+          title={headerTitle}
+          buttonText={headerButtonText}
+        />
+      )}
       <div className={styles.container}>
         <CarouselNews
           categorie={"كأس الاتحاد الإنجليز"}

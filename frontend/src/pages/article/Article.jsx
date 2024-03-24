@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import SubNews from "../../layouts/news/SubNews";
-import SectionHeader from "../../layouts/section_header/section_header";
-import { Modal } from "@mui/material";
+import SectionHeader from "../../layouts/SectionHeader/SectionHeader";
+import { Divider, Modal } from "@mui/material";
+import styles from "./Article.module.scss";
+import Tags from "../../sections/Tags/Tags";
 
 export default function Article() {
   const [open, setOpen] = useState(true);
@@ -53,17 +55,7 @@ export default function Article() {
           </div>
         </div>
       </Modal> */}
-      <div
-        style={{
-          display: "flex",
-          gap: "6px",
-          fontSize: "16px",
-          fontWeight: 300,
-          color: "#aeaeae",
-          margin: "16px auto",
-          maxWidth: "80%",
-        }}
-      >
+      <div className={styles.container}>
         <div style={{ fontWeight: 900 }}>رياضات ميكانيكية</div>
         <i className="fi fi-rr-angle-small-left" />
         <div>رياضات ميكانيكية</div>
@@ -72,15 +64,7 @@ export default function Article() {
         <i className="fi fi-rr-angle-small-left" />
         <div>رياضات ميكانيكية</div>
       </div>
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "4fr 2fr",
-          margin: "16px auto",
-          maxWidth: "80%",
-          gap: "20px",
-        }}
-      >
+      <div className={styles.article}>
         <div
         // style={{
         //   boxShadow: "rgba(145, 158, 171, 0.16) 0px 12px 24px -4px",
@@ -130,31 +114,18 @@ export default function Article() {
             </div>
           </div>
 
-          <hr
-            style={{
-              borderTop: "1px solid #ebebeb",
-              marginLeft: "1.25rem",
-              margin: "48px 0",
-            }}
-          />
+          <hr className={styles.divider} />
 
-          <div
-            style={{ fontSize: "20px", lineHeight: "30px", fontWeight: 900 }}
-          >
+          <div className={styles.introduction}>
             انتزع ماكس فيرستابن سائق رد بول وبطل العالم لسباقات فورمولا 1
             للسيارات مركز أول المنطلقين في سباق جائزة أستراليا الكبرى اليوم
             السبت وسينطلق إلى جواره من الصف الأول كارلوس ساينز سائق فيراري بعد
             أسبوعين من خضوعه لجراحة الزائدة الدودية.
           </div>
 
-          <hr
-            style={{
-              borderTop: "1px solid #ebebeb",
-              marginLeft: "1.25rem",
-              margin: "48px 0",
-            }}
-          />
-          <div style={{ fontSize: "20px", lineHeight: "30px" }}>
+          <hr className={styles.divider} />
+
+          <div className={styles.text}>
             واحتل سيرجيو بيريز زميل فيرستابن المركز الثالث لكنه سينطلق من المركز
             السادس بعدما فرض عليه مراقبو السباق عقوبة التأخر ثلاثة مراكز عند
             الانطلاق بعد إعاقته نيكو هولكنبرغ سائق هاس في الحصة الأولى للتجارب
@@ -172,15 +143,12 @@ export default function Article() {
             المستقيمة. لذلك توجد علامة استفهام غدا لكن هذا يجعل الأمر مثيرا".
           </div>
 
-          <hr
-            style={{
-              borderTop: "1px solid #ebebeb",
-              marginLeft: "1.25rem",
-              margin: "48px 0",
-            }}
-          />
+          <hr className={styles.divider} />
 
-          <SectionHeader title={"أهم الأخبار اليومية"} />
+          <SectionHeader
+            title={"أهم الأخبار اليومية"}
+            style={{ backgroundColor: "transparent" }}
+          />
           <div style={{ display: "grid", gap: "10px" }}>
             <SubNews
               categorie={"كأس الاتحاد الإنجليزي"}
@@ -205,52 +173,17 @@ export default function Article() {
           </div>
         </div>
         <div>
-          <div
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
-              gap: "6px",
-              color: "#5c2d91",
-              fontWeight: 900,
-            }}
-          >
-            <div
-              style={{
-                backgroundColor: "#f5f5f5",
-                padding: "6px 12px",
-                borderRadius: "50px",
-              }}
-            >
-              دوري أبطال أوروبا
-            </div>
-            <div
-              style={{
-                backgroundColor: "#f5f5f5",
-                padding: "6px 12px",
-                borderRadius: "50px",
-              }}
-            >
-              رياضات ميركاتو
-            </div>
-            <div
-              style={{
-                backgroundColor: "#f5f5f5",
-                padding: "6px 12px",
-                borderRadius: "50px",
-              }}
-            >
-              NBA
-            </div>
-            <div
-              style={{
-                backgroundColor: "#f5f5f5",
-                padding: "6px 12px",
-                borderRadius: "50px",
-              }}
-            >
-              القناة الأولمبية
-            </div>
-          </div>
+          <Tags
+            tagsList={[
+              "دوري أبطال أوروبا",
+              "رياضات ميركاتو",
+              "القناة الأولمبية",
+              "NBA",
+            ]}
+            headerTitle={"فيرستابن أول المنطلقين"}
+            style={{ backgroundColor: "white" }}
+          />
+
           <div style={{ display: "grid", gap: "10px", padding: "10px 0" }}>
             <SubNews
               categorie={"كأس الاتحاد الإنجليزي"}

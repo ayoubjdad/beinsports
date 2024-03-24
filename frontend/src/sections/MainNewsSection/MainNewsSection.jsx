@@ -2,17 +2,20 @@ import React from "react";
 import MainNews from "../../layouts/news/MainNews";
 import SubNews from "../../layouts/news/SubNews";
 import styles from "./MainNewsSection.module.scss";
-import SectionHeader from "../../layouts/section_header/section_header";
+import SectionHeader from "../../layouts/SectionHeader/SectionHeader";
 import Button from "../../components/button/button";
 
-export default function MainNewsSection() {
+export default function MainNewsSection({
+  headerBackground,
+  headerTitle,
+  headerButtonText,
+}) {
   return (
     <div style={{ marginBottom: "10px" }}>
       <SectionHeader
-        background={
-          "https://prod-media.beinsports.com/image/default_banner.png"
-        }
-        title={"أهم الأخبار اليومية"}
+        background={headerBackground}
+        title={headerTitle}
+        buttonText={headerButtonText}
       />
       <MainNews />
       <div className={styles.subNews}>

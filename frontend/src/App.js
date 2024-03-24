@@ -48,7 +48,7 @@ export default function App() {
     <>
       <NavbarTop />
       <NavbarMain />
-      <Content />
+      {/* <Content /> */}
       <Article />
       <Footer />
     </>

@@ -1,0 +1,29 @@
+.container {
+  margin-bottom: 10px;
+  box-shadow: rgba(145, 158, 171, 0.16) 0px 12px 24px -4px;
+  width: 100%;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  color: #5c2d91;
+  padding: 0 16px 14px 16px;
+  font-weight: 900;
+}
+
+.tag {
+  background-color: #f5f5f5;
+  padding: 6px 12px;
+  border-radius: 50px;
+  min-width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.logo {
+  height: 12px;
+  width: auto;
+}
