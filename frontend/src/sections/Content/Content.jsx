@@ -10,8 +10,10 @@ export default function Content() {
       style={{
         display: "grid",
         gridTemplateColumns: "4fr 2fr",
-        padding: "16px 120px",
-        gap: "16px",
+        margin: "16px auto",
+        maxWidth: "80%",
+        gap: "20px",
+        background: "#ffffff",
       }}
     >
       <div

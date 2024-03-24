@@ -31,6 +31,7 @@ export default function NavbarTop() {
           <img
             alt="logo"
             src="https://www.beinsports.com/_next/static/media/bein_logo.af017869.webp?ver=06-02-2024?w=128&q=75"
+            srcset="https://www.beinsports.com/_next/static/media/bein_logo.af017869.webp?ver=06-02-2024?w=128&q=75"
             style={{ width: "144px", display: "flex", alignItems: "center" }}
           />
         </div>

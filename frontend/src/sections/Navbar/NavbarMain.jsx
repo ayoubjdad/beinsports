@@ -43,7 +43,7 @@ export default function NavbarMain() {
           justifyContent: "flex-end",
         }}
       >
-        اشترك
+        أنشئ حسابك
       </div>
     </div>
   );

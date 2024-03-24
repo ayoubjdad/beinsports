@@ -1,17 +1,5 @@
-import { Helmet } from 'react-helmet-async';
-
-import { HomeView } from 'src/sections/home/view';
-
-// ----------------------------------------------------------------------
+import Content from "../sections/Content/Content";
 
 export default function HomePage() {
-  return (
-    <>
-      <Helmet>
-        <title> Minimal: The starting point for your next project</title>
-      </Helmet>
-
-      <HomeView />
-    </>
-  );
+  return <Content />;
 }
