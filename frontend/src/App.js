@@ -4,6 +4,8 @@ import Footer from "./sections/Footer/Footer";
 import Article from "./pages/article/Article";
 import NavbarMain from "./sections/Navbar/NavbarMain/NavbarMain";
 import NavbarTop from "./sections/Navbar/NavbarTop/NavbarTop";
+import styles from "./App.module.scss";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 export const colorPalette = {
   purple: "#5c2d91",
@@ -45,12 +47,16 @@ export default function App() {
   // }, []);
 
   return (
-    <>
+    <BrowserRouter>
       <NavbarTop />
       <NavbarMain />
-      {/* <Content /> */}
-      <Article />
+      <div className={styles.content}>
+        <Routes>
+          <Route exact path="/" element={<Content />} />
+          <Route path="/article" element={<Article />} />
+        </Routes>
+      </div>
       <Footer />
-    </>
+    </BrowserRouter>
   );
 }

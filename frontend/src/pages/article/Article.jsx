@@ -1,9 +1,26 @@
 import React, { useState } from "react";
 import SubNews from "../../layouts/news/SubNews";
 import SectionHeader from "../../layouts/SectionHeader/SectionHeader";
-import { Divider, Modal } from "@mui/material";
+import { Breadcrumbs, Link, Modal, Typography } from "@mui/material";
 import styles from "./Article.module.scss";
 import Tags from "../../sections/Tags/Tags";
+
+const Path = () => {
+  const path = ["رياضات ميكانيكية", "رياضات ميكانيكية", "رياضات ميكانيكية"];
+
+  return (
+    <div className={styles.path}>
+      {path.map((element, index) => {
+        return (
+          <>
+            {index !== 0 && <i className="fi fi-rr-angle-small-left" />}
+            <div style={{ fontWeight: 900 }}>{element}</div>
+          </>
+        );
+      })}
+    </div>
+  );
+};
 
 export default function Article() {
   const [open, setOpen] = useState(true);
@@ -55,22 +72,14 @@ export default function Article() {
           </div>
         </div>
       </Modal> */}
-      <div className={styles.container}>
-        <div style={{ fontWeight: 900 }}>رياضات ميكانيكية</div>
-        <i className="fi fi-rr-angle-small-left" />
-        <div>رياضات ميكانيكية</div>
-        <i className="fi fi-rr-angle-small-left" />
-        <div>رياضات ميكانيكية</div>
-        <i className="fi fi-rr-angle-small-left" />
-        <div>رياضات ميكانيكية</div>
-      </div>
+      <Path />
       <div className={styles.article}>
         <div
         // style={{
         //   boxShadow: "rgba(145, 158, 171, 0.16) 0px 12px 24px -4px",
         // }}
         >
-          <div style={{ display: "grid", gap: "20px" }}>
+          <div className={styles.articleCard}>
             <img
               alt="مواجهة مليئة بالإثارة بين مانشستر يونايتد وليفربول"
               srcset="https://s1.dmcdn.net/v/VvyK-1bziEaOrXzuo/x240 256w, https://s1.dmcdn.net/v/VvyK-1bziEaOrXzuo/x240 384w, https://s1.dmcdn.net/v/VvyK-1bziEaHAwgWg/x360 640w, https://s2.dmcdn.net/v/VvyK-1bziEaHrA162/x720 1080w, https://s2.dmcdn.net/v/VvyK-1bziEal1eB5z/x1080 1920w, https://s1.dmcdn.net/v/VvyK-1bziEa5tfmOT 3840w"
@@ -78,38 +87,18 @@ export default function Article() {
               decoding="async"
               data-nimg="fill"
               loading="lazy"
-              style={{
-                width: "100%",
-                height: "344px",
-                objectFit: "cover",
-              }}
+              className={styles.articleImage}
             />
-            <div
-              style={{
-                fontSize: "18px",
-                color: "#5c2d91",
-                display: "flex",
-                alignContent: "center",
-                justifyContent: "space-between",
-              }}
-            >
+            <div className={styles.articleInfo}>
               <div>فورمولا 1</div>
-              <div
-                style={{
-                  backgroundColor: "#f5f5f5",
-                  borderRadius: "50px",
-                  padding: "8px",
-                }}
-              >
+              <div className={styles.shareIcon}>
                 <i className="fi fi-rr-share" />
               </div>
             </div>
-            <div style={{ fontSize: "36px", fontWeight: 900 }}>
+            <div className={styles.articleTitle}>
               فيرستابن أول المنطلقين في جائزة أستراليا الكبرى للفورمولا 1
             </div>
-            <div
-              style={{ fontSize: "16px", fontWeight: 300, color: "#aeaeae" }}
-            >
+            <div className={styles.articleDetails}>
               23/03/2024 - 09:08 - by Reuters
             </div>
           </div>

@@ -35,7 +35,7 @@ export default function Tags({
   headerButtonText,
   style,
 }) {
-  const tags = [...tagsList] || staticTags || [];
+  const tags = (tagsList?.length && tagsList) || staticTags || [];
   return (
     <div style={{ ...style }} className={styles.container}>
       {headerTitle && (
