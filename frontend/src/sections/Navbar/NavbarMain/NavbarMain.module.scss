@@ -1,0 +1,35 @@
+.container {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  padding: 0 84px;
+  height: 50px;
+  align-items: center;
+  background-color: #5c2d91;
+  color: white;
+}
+
+.menuItems {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.menuItem {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  &:hover {
+    border-bottom: 2px solid rgb(255, 255, 255);
+  }
+}
+
+.createAccountContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.createAccount {
+  padding: 6px;
+  border: 1px solid white;
+  border-radius: 3px;
+}

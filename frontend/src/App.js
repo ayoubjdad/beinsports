@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Content from "./sections/Content/Content";
-import NavbarTop from "./sections/Navbar/NavbarTop";
-import NavbarMain from "./sections/Navbar/NavbarMain";
 import Footer from "./sections/Footer/Footer";
 import Article from "./pages/article/Article";
+import NavbarMain from "./sections/Navbar/NavbarMain/NavbarMain";
+import NavbarTop from "./sections/Navbar/NavbarTop/NavbarTop";
 
 export const colorPalette = {
   purple: "#5c2d91",

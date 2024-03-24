@@ -46,19 +46,22 @@ export default function MainNewsSection() {
           <hr
             style={{
               borderTop: "1px solid #ebebeb",
-              width: "40%",
+              width: "100%",
               marginLeft: "1.25rem",
             }}
           />
           <Button
             title={"أظهر المزيد"}
             icon={<i className="fi fi-br-angle-small-down" />}
-            style={{ color: "#5c2d91", borderColor: "#5c2d91" }}
+            style={{
+              color: "#5c2d91",
+              borderColor: "#5c2d91",
+            }}
           />
           <hr
             style={{
               borderTop: "1px solid #ebebeb",
-              width: "40%",
+              width: "100%",
               marginRight: "1.25rem",
             }}
           />
