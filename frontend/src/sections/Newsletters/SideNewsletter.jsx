@@ -41,7 +41,7 @@ export default function SideNewsletter() {
           padding: "8px 16px",
           width: "-webkit-fill-available",
           border: "none",
-          backgroundColor: "rgb(245, 245, 245)",
+          backgroundColor: "#f5f5f5",
           borderRadius: "50px",
           fontFamily: "Bein-Bold",
           fontWeight: 900,

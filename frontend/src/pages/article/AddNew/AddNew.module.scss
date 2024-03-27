@@ -1,0 +1,25 @@
+.container {
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 900;
+}
+
+.form {
+  margin-top: 36px;
+  display: grid;
+  gap: 16px;
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btns {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

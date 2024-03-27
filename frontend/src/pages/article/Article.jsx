@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import SubNews from "../../layouts/news/SubNews";
 import SectionHeader from "../../layouts/SectionHeader/SectionHeader";
-import { Breadcrumbs, Link, Modal, Typography } from "@mui/material";
 import styles from "./Article.module.scss";
 import Tags from "../../sections/Tags/Tags";
 

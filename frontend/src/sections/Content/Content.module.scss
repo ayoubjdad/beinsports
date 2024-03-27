@@ -14,3 +14,49 @@
 .sectionContainer {
   box-shadow: rgba(145, 158, 171, 0.16) 0px 12px 24px -4px;
 }
+
+.gameContainer {
+  display: grid;
+  gap: 20px;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: rgba(145, 158, 171, 0.16) 0px 12px 24px -4px;
+}
+
+.gameInfos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.gameCompetition {
+  color: #5c2d91;
+}
+
+.gameDate {
+}
+
+.gameTeamSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.gameTeam {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  img {
+    width: 20px;
+  }
+}
+
+.gameScore {
+  width: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
