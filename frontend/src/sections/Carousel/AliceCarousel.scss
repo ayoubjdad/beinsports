@@ -1,0 +1,27 @@
+.alice-carousel__wrapper {
+  ul {
+    // direction: rtl;
+    li {
+      margin-left: 1.5rem;
+    }
+  }
+}
+
+.alice-carousel__prev-btn,
+.alice-carousel__next-btn {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  width: fit-content;
+  font-size: 20px;
+  color: #5c2d91;
+  height: -webkit-fill-available;
+  background-color: rgb(255, 255, 255);
+  // box-shadow: rgba(255, 255, 255, 0.99) 4px 3px 5px 4px;
+  display: flex;
+  align-items: center;
+}
+
+.alice-carousel__next-btn {
+  right: 0;
+}

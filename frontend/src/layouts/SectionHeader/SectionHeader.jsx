@@ -8,7 +8,12 @@ export default function SectionHeader({
   title,
   buttonText,
   style,
+  link,
 }) {
+  const redirect = (link) => {
+    // <Redirect to={link} />;
+  };
+
   return (
     <div
       className={styles.container}
@@ -33,6 +38,7 @@ export default function SectionHeader({
         <Button
           icon={<i className="fi fi-rr-arrow-small-left" />}
           title={buttonText}
+          onClick={() => redirect(link)}
         />
       )}
     </div>

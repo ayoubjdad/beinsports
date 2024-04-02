@@ -1,6 +1,9 @@
 .container {
+  box-shadow: 0px 0px 12px rgba(141, 141, 141, 0.2);
+}
+
+.news {
+  padding: 12px 12px 24px 12px;
   background-color: white;
-  padding: 12px;
-  display: flex;
-  gap: 1.5rem;
+  width: 800px;
 }

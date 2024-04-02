@@ -9,6 +9,7 @@ export default function SubVideos({ categorie, title, index }) {
         alignItems: "center",
         padding: "0 20px",
         borderBottom: "1px solid #c8c8c8",
+        backgroundColor: "white",
       }}
     >
       <img

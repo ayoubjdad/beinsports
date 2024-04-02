@@ -1,9 +1,10 @@
 .container {
   display: grid;
   grid-template-columns: 4fr 3fr;
-  padding: 10px 84px;
+  padding: 10px 140px;
   align-items: center;
   color: #5c2d91;
+  background-color: white;
 }
 
 .main {
@@ -29,7 +30,7 @@
 }
 
 .menuItemTitle {
-  font-weight: 700;
+  font-weight: 900;
 }
 
 .searchIcon {
