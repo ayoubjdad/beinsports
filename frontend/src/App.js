@@ -7,6 +7,7 @@ import NavbarTop from "./sections/Navbar/NavbarTop/NavbarTop";
 import styles from "./App.module.scss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AddNew from "./pages/article/AddNew/AddNew";
+import GlobalStandings from "./sections/Standings/GlobalStandings/GlobalStandings";
 
 export const colorPalette = {
   purple: "#5c2d91",
@@ -41,6 +42,7 @@ export default function App() {
           <Route exact path="/" element={<Content />} />
           <Route path="/article" element={<Article />} />
           <Route path="/post/new" element={<AddNew />} />
+          <Route path="/standings" element={<GlobalStandings />} />
         </Routes>
       </div>
       <Footer />

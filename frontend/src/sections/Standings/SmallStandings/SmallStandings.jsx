@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "./SmallStandings.module.scss";
 import { arabicTeamsNames } from "../../../App";
+import SectionHeader from "../../../layouts/SectionHeader/SectionHeader";
 
 export default function SmallStandings() {
   const [standings, setStandings] = useState([]);
@@ -25,38 +26,53 @@ export default function SmallStandings() {
   }, []);
 
   return (
-    <div className={styles.container}>
-      <div className={styles.header}>
-        <div>الرتبة</div>
-        <div className={styles.team}>النادي</div>
-        <div>لعب</div>
-        <div>فرق</div>
-        <div>نقاط</div>
-      </div>
+    <div>
+      <SectionHeader
+        background={
+          "https://media.istockphoto.com/id/1367980393/fr/vectoriel/g%C3%A9om%C3%A9trique-futuriste-fond-de-gradation-violet-fonc%C3%A9-illustration-vectorielle.jpg?s=612x612&w=0&k=20&c=ZIEv8r7DibmSeE-35-h_FAitSt0HWlaOdtfTQld9T3I="
+        }
+        competitionLogo={
+          "https://upload.wikimedia.org/wikipedia/commons/3/30/Botola1.png"
+        }
+        title={"جدول الترتيب"}
+        buttonText={"الترتيب"}
+      />
 
-      {standings?.map((element) => {
-        const arabicName = arabicTeamsNames.find(
-          ({ id }) => id === element?.team?.id
-        );
-        return (
-          <div className={styles.row}>
-            <div className={styles.position}>{element?.position}</div>
-            <div className={styles.team}>
-              <img
-                alt={arabicName.name}
-                title={arabicName.name}
-                src={`https://api.sofascore.app/api/v1/team/${element?.team?.id}/image`}
-              />
-              {arabicName.name}
-            </div>
-            <div className={styles.matches}>{element?.matches}</div>
-            <div className={styles.score}>
-              {element?.scoresFor - element?.scoresAgainst}
-            </div>
-            <div className={styles.points}>{element?.points}</div>
-          </div>
-        );
-      })}
+      <div className={styles.container}>
+        <div className={styles.header}>
+          <div>الرتبة</div>
+          <div className={styles.team}>النادي</div>
+          <div>لعب</div>
+          <div>فرق</div>
+          <div>نقاط</div>
+        </div>
+
+        <div className={styles.body}>
+          {standings?.map((element) => {
+            const arabicName = arabicTeamsNames.find(
+              ({ id }) => id === element?.team?.id
+            );
+            return (
+              <div className={styles.row}>
+                <div className={styles.position}>{element?.position}</div>
+                <div className={styles.team}>
+                  <img
+                    alt={arabicName.name}
+                    title={arabicName.name}
+                    src={`https://api.sofascore.app/api/v1/team/${element?.team?.id}/image`}
+                  />
+                  {arabicName.name}
+                </div>
+                <div className={styles.matches}>{element?.matches}</div>
+                <div className={styles.score}>
+                  {element?.scoresFor - element?.scoresAgainst}
+                </div>
+                <div className={styles.points}>{element?.points}</div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
     </div>
   );
 }

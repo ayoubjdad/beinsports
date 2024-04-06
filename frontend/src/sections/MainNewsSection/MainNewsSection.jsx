@@ -11,7 +11,7 @@ export default function MainNewsSection({
   headerButtonText,
 }) {
   return (
-    <div className={styles.container} style={{ marginBottom: "10px" }}>
+    <div className={styles.container}>
       <SectionHeader
         background={headerBackground}
         title={headerTitle}

@@ -1,0 +1,45 @@
+.gameContainer {
+  display: grid;
+  gap: 20px;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 0px 0px 12px rgba(141, 141, 141, 0.2);
+}
+
+.gameInfos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.gameCompetition {
+  color: #5c2d91;
+}
+
+.gameDate {
+}
+
+.gameTeamSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.gameTeam {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  img {
+    width: 20px;
+  }
+}
+
+.gameScore {
+  width: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

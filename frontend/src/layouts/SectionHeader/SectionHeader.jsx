@@ -21,7 +21,6 @@ export default function SectionHeader({
         ...style,
         backgroundImage: `url(${background})`,
         color: !background && "black",
-        marginBottom: !buttonText && "0px",
       }}
     >
       <div className={styles.title_container}>
