@@ -9,7 +9,10 @@ export default function AddNew() {
   return (
     <div className={styles.container}>
       <div className={styles.title}>إنشاء مشاركة جديدة</div>
-      <form className={styles.form} onSubmit={handleSubmit}>
+      <form
+        className={styles.form}
+        // onSubmit={handleSubmit}
+      >
         <Input placeholder="العنوان" />
         <Input placeholder="الوصف" />
         <InputTextArea placeholder="النص" />
