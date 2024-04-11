@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import SectionHeader from "../../layouts/SectionHeader/SectionHeader";
 import MainNewsSection from "../MainNewsSection/MainNewsSection";
-import Carousel from "../Carousel/Carousel";
-import SideNewsletter from "../Newsletters/SideNewsletter";
+import Carousel from "../body/carousel/Carousel";
+import SideNewsletter from "../side/newsletter/Newsletter";
 import styles from "./Content.module.scss";
 import Tags from "../Tags/Tags";
 import SubVideos from "../../layouts/Videos/SubVideos";

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import SubNews from "../../layouts/news/SubNews";
 import SectionHeader from "../../layouts/SectionHeader/SectionHeader";
 import styles from "./Article.module.scss";
-import Tags from "../../sections/Tags/Tags";
+import Tags from "../../sections/body/tags/Tags";
 
 const Path = () => {
   const path = ["رياضات ميكانيكية", "رياضات ميكانيكية", "رياضات ميكانيكية"];

@@ -1,0 +1,66 @@
+.container {
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: 0px 0px 20px rgba(141, 141, 141, 0.2);
+  overflow: hidden;
+}
+
+.statsContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 0 16px 16px 16px;
+}
+
+.stats {
+  display: grid;
+  background-color: #eeeeee;
+  border-radius: 8px;
+  padding: 16px;
+  gap: 10px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.playerStatContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  // border-radius: 8px;
+  padding-bottom: 10px;
+}
+
+.playerStatContainer:not(:last-child) {
+  border-bottom: 1px solid rgb(195, 195, 195);
+}
+
+.playerContainer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.playerImage {
+  border-radius: 80px;
+  width: 40px;
+}
+
+.playerName {
+}
+
+.playerTeam {
+}
+
+.playerStat {
+  color: #5c2d91;
+  font-size: 28px;
+}
+
+.divider {
+  border-top: 2px solid red;
+}

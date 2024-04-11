@@ -1,0 +1,25 @@
+.container {
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0px 0px 20px rgba(141, 141, 141, 0.2);
+}
+
+.subNews {
+  display: grid;
+  gap: 10px;
+  padding: 20px;
+  background-color: white;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.separator {
+  border-top: 1px solid #ebebeb;
+  width: 100%;
+  margin: 0 1.25rem;
+}
