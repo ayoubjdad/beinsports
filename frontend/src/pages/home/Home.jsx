@@ -9,8 +9,34 @@ import Rankings from "../../sections/side/rankings/Rankings";
 import SubVideo from "../../layouts/articles/SubVideo";
 import SectionHeader from "../../layouts/SectionHeader/SectionHeader";
 import HomeStats from "../../sections/body/stats/HomeStats";
+import { featuredTeams, getTodayDate } from "../../App";
+import { useQuery } from "react-query";
+import AlertComponent from "../../components/alert/AlertComponent";
+
+const fetchCategories = async () => {
+  try {
+    const response = await fetch(
+      "https://api.sofascore.com/api/v1/config/unique-tournaments/en/football"
+    );
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+    const data = await response.json();
+    return data?.events;
+  } catch (error) {
+    console.error("❌ Error fetching data:", error);
+    return [];
+  }
+};
 
 export default function Home() {
+  const { data: categories } = useQuery("categories", fetchCategories, {
+    refetchOnWindowFocus: false,
+    retry: false,
+    refetchOnmount: false,
+    refetchOnReconnect: false,
+  });
+
   return (
     <div className={styles.container}>
       <TopGames />

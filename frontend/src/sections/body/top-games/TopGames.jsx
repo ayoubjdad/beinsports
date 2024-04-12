@@ -3,13 +3,9 @@ import { useQuery } from "react-query";
 import styles from "./TopGames.module.scss";
 import SectionHeader from "../../../layouts/SectionHeader/SectionHeader";
 import { red } from "../../../theme/palette";
+import { getTodayDate } from "../../../App";
 
-const getTodayDate = () => {
-  const today = new Date();
-  const formattedDate = today.toISOString().split("T")[0];
-  return formattedDate;
-};
-
+// * moroccan team => moroccan player =>
 const fetchScheduledEvents = async () => {
   try {
     const today = getTodayDate();

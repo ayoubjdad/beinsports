@@ -4,9 +4,9 @@ import SectionHeader from "../../layouts/SectionHeader/SectionHeader";
 import styles from "./Article.module.scss";
 import Tags from "../../sections/body/tags/Tags";
 
-const Path = () => {
-  const path = ["رياضات ميكانيكية", "رياضات ميكانيكية", "رياضات ميكانيكية"];
+const path = ["رياضات ميكانيكية", "رياضات ميكانيكية", "رياضات ميكانيكية"];
 
+const Path = () => {
   return (
     <div className={styles.path}>
       {path.map((element, index) => {
@@ -21,9 +21,35 @@ const Path = () => {
   );
 };
 
+function convertTimestamp(timestamp) {
+  // Create a new Date object from the timestamp (in milliseconds)
+  var date = new Date(timestamp);
+
+  // Extract the components of the date and time
+  var day = date.getDate();
+  var month = date.getMonth() + 1; // Month is zero-based, so we add 1
+  var year = date.getFullYear();
+  var hours = date.getHours();
+  var minutes = date.getMinutes();
+
+  // Add leading zeros if necessary
+  day = (day < 10 ? "0" : "") + day;
+  month = (month < 10 ? "0" : "") + month;
+  hours = (hours < 10 ? "0" : "") + hours;
+  minutes = (minutes < 10 ? "0" : "") + minutes;
+
+  // Construct the formatted date and time string
+  var formattedDate = day + "/" + month + "/" + year;
+  var formattedTime = hours + ":" + minutes;
+
+  // Return the formatted string
+  return formattedDate + " - " + formattedTime;
+}
+
 export default function Article() {
   const [open, setOpen] = useState(true);
   const handleClose = () => setOpen(false);
+  const formattedDateTime = convertTimestamp(Date.now());
 
   return (
     <>
@@ -98,7 +124,7 @@ export default function Article() {
               فيرستابن أول المنطلقين في جائزة أستراليا الكبرى للفورمولا 1
             </div>
             <div className={styles.articleDetails}>
-              23/03/2024 - 09:08 - by Reuters
+              {formattedDateTime} - أيوب اجضاض
             </div>
           </div>
 
@@ -106,9 +132,7 @@ export default function Article() {
 
           <div className={styles.introduction}>
             انتزع ماكس فيرستابن سائق رد بول وبطل العالم لسباقات فورمولا 1
-            للسيارات مركز أول المنطلقين في سباق جائزة أستراليا الكبرى اليوم
-            السبت وسينطلق إلى جواره من الصف الأول كارلوس ساينز سائق فيراري بعد
-            أسبوعين من خضوعه لجراحة الزائدة الدودية.
+            للسيارات مركز أول المنطلقين في سباق جائزة أستراليا الأول.
           </div>
 
           <hr className={styles.divider} />
@@ -134,7 +158,7 @@ export default function Article() {
           <hr className={styles.divider} />
 
           <SectionHeader
-            title={"أهم الأخبار اليومية"}
+            title={"مواضيع ذات صلة"}
             style={{ backgroundColor: "transparent" }}
           />
           <div style={{ display: "grid", gap: "10px" }}>
