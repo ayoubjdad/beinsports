@@ -12,6 +12,7 @@ import HomeStats from "../../sections/body/stats/HomeStats";
 import { featuredTeams, getTodayDate } from "../../App";
 import { useQuery } from "react-query";
 import AlertComponent from "../../components/alert/AlertComponent";
+import { News } from "../../data/News";
 
 const fetchCategories = async () => {
   try {
@@ -47,6 +48,7 @@ export default function Home() {
             headerBackground="https://prod-media.beinsports.com/image/default_banner.png"
             headerTitle="أهم الأخبار اليومية"
             headerButtonText="المزيد"
+            news={News}
           />
           <Carousel headerTitle={"أهم الأخبار اليومية"} />
         </div>

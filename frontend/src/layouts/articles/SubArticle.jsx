@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function SubArticle({ categorie, title }) {
+export default function SubArticle({ categorie, title, image }) {
   return (
     <div
       style={{
@@ -13,9 +13,8 @@ export default function SubArticle({ categorie, title }) {
       }}
     >
       <img
-        alt="مواجهة مليئة بالإثارة بين مانشستر يونايتد وليفربول"
-        srcset="https://s1.dmcdn.net/v/VvyK-1bziEaOrXzuo/x240 256w, https://s1.dmcdn.net/v/VvyK-1bziEaOrXzuo/x240 384w, https://s1.dmcdn.net/v/VvyK-1bziEaHAwgWg/x360 640w, https://s2.dmcdn.net/v/VvyK-1bziEaHrA162/x720 1080w, https://s2.dmcdn.net/v/VvyK-1bziEal1eB5z/x1080 1920w, https://s1.dmcdn.net/v/VvyK-1bziEa5tfmOT 3840w"
-        src="https://s1.dmcdn.net/v/VvyK-1bziEa5tfmOT"
+        alt={title}
+        src={image}
         decoding="async"
         data-nimg="fill"
         loading="lazy"
@@ -34,7 +33,7 @@ export default function SubArticle({ categorie, title }) {
         }}
       >
         <div style={{ color: "#5c2d91", fontSize: "16px" }}>{categorie}</div>
-        <p style={{ fontSize: "18px", margin: 0 }}>{title} </p>
+        <p style={{ fontSize: "18px", margin: 0 }}>{title}</p>
       </div>
     </div>
   );
