@@ -17,25 +17,6 @@ export const getTodayDate = () => {
   return formattedDate;
 };
 
-export const arabicTeamsNames = [
-  { id: 24394, name: "الجيش الملكي" },
-  { id: 41757, name: "الرجاء الرياضي" },
-  { id: 80395, name: "نهضة بركان" },
-  { id: 55027, name: "اتحاد الفتح الرياضي" },
-  { id: 36268, name: "الوداد الرياضي" },
-  { id: 55037, name: "أولمبيك آسفي" },
-  { id: 118834, name: "إتحاد تواركة" },
-  { id: 55049, name: "المغرب التطواني" },
-  { id: 263373, name: "نهضة الزمامرة" },
-  { id: 55035, name: "المغرب الفاسي" },
-  { id: 55039, name: "حسنية أكادير" },
-  { id: 87180, name: "اتحاد طنجة" },
-  { id: 327830, name: "شباب المحمدية" },
-  { id: 297607, name: "الشباب الرياضي السوالم" },
-  { id: 170588, name: "مولودية وجدة" },
-  { id: 118830, name: "يوسفية برشيد" },
-];
-
 export const featuredTeams = [
   "Manchester City",
   "Liverpool FC",

@@ -1,5 +1,5 @@
 import React from "react";
-import { arabicTeamsNames } from "../../../App";
+import { arabicTeamsNames } from "../../../data/ArabicNames";
 import styles from "./Game.module.scss";
 
 export default function Game({ event, key }) {

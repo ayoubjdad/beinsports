@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "./SmallStandings.module.scss";
-import { arabicTeamsNames } from "../../../App";
+import { arabicTeamsNames } from "../../../data/ArabicNames";
 import SectionHeader from "../../../layouts/SectionHeader/SectionHeader";
 
 export default function SmallStandings() {

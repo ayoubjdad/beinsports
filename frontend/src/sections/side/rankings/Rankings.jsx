@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Rankings.module.scss";
-import { arabicTeamsNames } from "../../../App";
+import { arabicTeamsNames } from "../../../data/ArabicNames";
 import SectionHeader from "../../../layouts/SectionHeader/SectionHeader";
 import { useQuery } from "react-query";
 

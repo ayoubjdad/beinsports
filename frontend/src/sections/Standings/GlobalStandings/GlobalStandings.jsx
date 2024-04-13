@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "./GlobalStandings.module.scss";
-import { arabicTeamsNames } from "../../../App";
+import { arabicTeamsNames } from "../../../data/ArabicNames";
 import SideNewsletter from "../../side/newsletter/Newsletter";
 
 export default function GlobalStandings() {
