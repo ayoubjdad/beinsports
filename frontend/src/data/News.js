@@ -468,4 +468,78 @@ export const News = [
     has_copyright: true,
     lang: "ar",
   },
+  {
+    title:
+      "ميسي الشاب يبهر عالم كرة القدم: ريان ميسي يحقق إنجازاً تاريخياً في ديجون الفرنسي",
+    url: "https://www.elbotola.com/article/2024-04-12-20-35-253.html",
+    tags: [
+      {
+        name: "ديجون",
+        url: "https://www.elbotola.com/analytics/team/jednm9wh48pryox",
+        image: "//images.elbotola.com/stats/logos/jednm9wh48pryox.png",
+      },
+    ],
+    image: {
+      default_path:
+        "//images2.elbotola.com/article/66199b2dc9f8015afc901690_default.jpg",
+      thumb:
+        "//images2.elbotola.com/article/66199b2dc9f8015afc901690_thumb.jpg",
+    },
+    pub_date: 1712955120,
+  },
+  {
+    title:
+      "ريان ميسي يدخل التاريخ: أصغر لاعب يحرز هدفاً في تاريخ ديجون الفرنسي",
+    url: "https://www.elbotola.com/article/2024-04-12-20-35-253.html",
+    tags: [
+      {
+        name: "ديجون",
+        url: "https://www.elbotola.com/analytics/team/jednm9wh48pryox",
+        image: "//images.elbotola.com/stats/logos/jednm9wh48pryox.png",
+      },
+    ],
+    image: {
+      default_path:
+        "//images2.elbotola.com/article/66199b2dc9f8015afc901690_default.jpg",
+      thumb:
+        "//images2.elbotola.com/article/66199b2dc9f8015afc901690_thumb.jpg",
+    },
+    pub_date: 1712955120,
+  },
+  {
+    title: "ريان ميسي يسجل هدفاً تاريخياً في مسيرته الكروية مع ديجون الفرنسي",
+    url: "https://www.elbotola.com/article/2024-04-12-20-35-253.html",
+    tags: [
+      {
+        name: "ديجون",
+        url: "https://www.elbotola.com/analytics/team/jednm9wh48pryox",
+        image: "//images.elbotola.com/stats/logos/jednm9wh48pryox.png",
+      },
+    ],
+    image: {
+      default_path:
+        "//images2.elbotola.com/article/66199b2dc9f8015afc901690_default.jpg",
+      thumb:
+        "//images2.elbotola.com/article/66199b2dc9f8015afc901690_thumb.jpg",
+    },
+    pub_date: 1712955120,
+  },
+  {
+    title: "ريان ميسي يسجل هدفاً تاريخياً ويحقق رقماً قياسياً في ديجون الفرنسي",
+    url: "https://www.elbotola.com/article/2024-04-12-20-35-253.html",
+    tags: [
+      {
+        name: "ديجون",
+        url: "https://www.elbotola.com/analytics/team/jednm9wh48pryox",
+        image: "//images.elbotola.com/stats/logos/jednm9wh48pryox.png",
+      },
+    ],
+    image: {
+      default_path:
+        "https://imgresizer.eurosport.com/unsafe/1200x0/filters:format(jpeg)/origin-imgresizer.eurosport.com/2023/01/24/3534612-72039408-2560-1440.jpg",
+      thumb:
+        "https://images2.elbotola.com/article/66199b2dc9f8015afc901690_thumb.jpg",
+    },
+    pub_date: 1712955120,
+  },
 ];

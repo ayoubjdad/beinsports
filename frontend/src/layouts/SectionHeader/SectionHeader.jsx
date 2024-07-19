@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../../components/button/button";
+// import Button from "../../components/button/button";
 import styles from "./SectionHeader.module.scss";
 
 export default function SectionHeader({
@@ -34,11 +34,12 @@ export default function SectionHeader({
         <span className={styles.title}>{title}</span>
       </div>
       {buttonText && (
-        <Button
-          icon={<i className="fi fi-rr-arrow-small-left" />}
-          title={buttonText}
-          onClick={() => redirect(link)}
-        />
+        <></>
+        // <Button
+        //   icon={<i className="fi fi-rr-arrow-small-left" />}
+        //   title={buttonText}
+        //   onClick={() => redirect(link)}
+        // />
       )}
     </div>
   );

@@ -4,6 +4,8 @@ import styles from "./TopGames.module.scss";
 import SectionHeader from "../../../layouts/SectionHeader/SectionHeader";
 import { red } from "../../../theme/palette";
 import { getTodayDate } from "../../../App";
+import { featuredTeams, topTournamentIds } from "../../../data/FeaturedTeams";
+import MinifiedGame from "../../../layouts/games/minified-game/MinifiedGame";
 
 // * moroccan team => moroccan player =>
 const fetchScheduledEvents = async () => {
@@ -17,7 +19,31 @@ const fetchScheduledEvents = async () => {
       throw new Error("Network response was not ok");
     }
     const data = await response.json();
-    return data?.events?.slice(0, 10);
+
+    const filteredData = data?.events.filter(({ tournament }) =>
+      topTournamentIds.includes(tournament.uniqueTournament.id)
+    );
+
+    // const list = [];
+    // for (const id of topTournamentIds) {
+    //   if (id === 937) {
+    //     const liiiiiii = filteredData.filter(
+    //       ({ tournament }) => tournament.uniqueTournament.id === id
+    //     );
+    //     list.push(...liiiiiii);
+    //   } else {
+    //     const liiiiiii = filteredData.filter(
+    //       ({ tournament, awayTeam, homeTeam }) =>
+    //         tournament.uniqueTournament.id === id &&
+    //         featuredTeams.includes(homeTeam.name || awayTeam.name)
+    //     );
+    //     list.push(...liiiiiii);
+    //   }
+    // }
+
+    // return list;
+
+    return filteredData.slice(0, 8);
   } catch (error) {
     console.error("❌ Error fetching data:", error);
     return [];
@@ -37,6 +63,10 @@ const Score = ({ homeScore, awayScore, status }) => {
     return "لم تبدأ";
   }
 
+  if (status.type === "postponed") {
+    return "أجلت";
+  }
+
   return homeScore.display + " - " + awayScore.display;
 };
 
@@ -53,41 +83,17 @@ const TopGames = () => {
       <SectionHeader title="أبرز مباريات اليوم" />
       <div className={styles.gamesContainer}>
         {data?.length &&
-          data.map(({ homeTeam, homeScore, awayTeam, awayScore, status }) => (
-            <div
-              className={styles.game}
-              style={{
-                backgroundColor: status.type === "inprogress" && red?.lighter,
-              }}
-              key={status.uniqueTournamentId}
-            >
-              <div className={styles.gameTeam}>
-                <img
-                  alt={homeTeam.shortName}
-                  title={homeTeam.shortName}
-                  className={styles.teamLogo}
-                  src={`https://api.sofascore.app/api/v1/team/${homeTeam?.id}/image`}
-                />
-              </div>
-
-              <div className={styles.gameTeam}>
-                <Score
-                  homeScore={homeScore}
-                  awayScore={awayScore}
-                  status={status}
-                />
-              </div>
-
-              <div className={styles.gameTeam}>
-                <img
-                  alt={awayTeam.shortName}
-                  title={awayTeam.shortName}
-                  className={styles.teamLogo}
-                  src={`https://api.sofascore.app/api/v1/team/${awayTeam?.id}/image`}
-                />
-              </div>
-            </div>
-          ))}
+          data.map(({ homeTeam, homeScore, awayTeam, awayScore, status }) => {
+            return (
+              <MinifiedGame
+                homeTeam={homeTeam}
+                homeScore={homeScore}
+                awayTeam={awayTeam}
+                awayScore={awayScore}
+                status={status}
+              />
+            );
+          })}
       </div>
     </div>
   );

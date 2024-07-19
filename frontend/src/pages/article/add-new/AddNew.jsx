@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "./AddNew.module.scss";
 import Input, { InputTextArea } from "../../../components/input/Input";
 import Switch from "../../../components/switch/Switch";
-import Button from "../../../components/button/button";
+// import Button from "../../../components/button/button";
 import Upload from "../../../components/upload/Upload";
 import Editor from "../../../components/editor/Editor";
 
@@ -27,7 +27,7 @@ export default function AddNew() {
         <div className={styles.bottom}>
           <Switch />
           <div className={styles.btns}>
-            <Button
+            {/* <Button
               title={"حفظ"}
               style={{ backgroundColor: "#5c2d91", color: "white" }}
             />
@@ -38,7 +38,7 @@ export default function AddNew() {
                 borderColor: "#5c2d91",
                 color: "#5c2d91",
               }}
-            />
+            /> */}
           </div>
         </div>
       </form>

@@ -32,7 +32,7 @@ export default function Rankings() {
   return (
     <div className={styles.container}>
       <SectionHeader
-        background="https://media.istockphoto.com/id/1367980393/fr/vectoriel/g%C3%A9om%C3%A9trique-futuriste-fond-de-gradation-violet-fonc%C3%A9-illustration-vectorielle.jpg?s=612x612&w=0&k=20&c=ZIEv8r7DibmSeE-35-h_FAitSt0HWlaOdtfTQld9T3I="
+        background="https://prod-media.beinsports.com/image/2kwbbcootiqqgmrzs6o5inle5_banner.png"
         competitionLogo="https://upload.wikimedia.org/wikipedia/commons/3/30/Botola1.png"
         title="جدول الترتيب"
         buttonText="الترتيب"

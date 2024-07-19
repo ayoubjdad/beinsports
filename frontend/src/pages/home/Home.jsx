@@ -13,6 +13,8 @@ import { featuredTeams, getTodayDate } from "../../App";
 import { useQuery } from "react-query";
 import AlertComponent from "../../components/alert/AlertComponent";
 import { News } from "../../data/News";
+import { Button, InputAdornment, TextField } from "@mui/material";
+import Comps from "../Comps";
 
 const fetchCategories = async () => {
   try {
@@ -40,8 +42,10 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
+      <Comps />
+
       <TopGames />
-      <div className={styles.contentContainer}>
+      {/*<div className={styles.contentContainer}>
         <div className={styles.content}>
           <Tags headerTitle={"مسابقات"} />
           <MainNews
@@ -52,6 +56,7 @@ export default function Home() {
           />
           <Carousel headerTitle={"أهم الأخبار اليومية"} />
         </div>
+
         <div className={styles.side}>
           <Rankings />
           <Newsletter />
@@ -74,7 +79,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <HomeStats />
+      <HomeStats /> */}
     </div>
   );
 }

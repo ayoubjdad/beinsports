@@ -1,20 +1,21 @@
 .container {
   border-radius: 12px;
   background-color: white;
-  box-shadow: 0px 0px 20px rgba(141, 141, 141, 0.2);
+  // box-shadow: 0px 0px 20px rgba(141, 141, 141, 0.2);
   overflow: hidden;
 }
 
 .gamesContainer {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 16px;
+  // grid-template-columns: repeat(8, 1fr);
+  gap: 10px;
+  padding: 0px 16px 16px;
 }
 
 .game {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 10px;
   border-radius: 6px;
   gap: 10px;
@@ -29,14 +30,7 @@
 }
 
 .gameScore {
-  background-color: white;
-  padding: 4px 8px;
-  width: 25px;
-  border-radius: 4px;
-  text-align: center;
-  img {
-    width: 20px;
-  }
+  font-size: 16px;
 }
 
 .teamLogo {

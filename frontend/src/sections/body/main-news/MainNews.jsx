@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import styles from "./MainNews.module.scss";
-import Button from "../../../components/button/button";
+// import Button from "../../../components/button/button";
 import SectionHeader from "../../../layouts/SectionHeader/SectionHeader";
-import SubArticle from "../../../layouts/articles/SubArticle";
-import MainArticle from "../../../layouts/articles/MainArticle";
+import SubArticle from "../../../layouts/articles/sub-article/SubArticle";
+import MainArticle from "../../../layouts/articles/main-article/MainArticle";
 
 export default function MainNews({
   headerBackground,
@@ -12,7 +12,16 @@ export default function MainNews({
   news,
 }) {
   const [skip, setSkip] = useState(false);
-  const sortedNews = news.sort((a, b) => b.pub_date - a.pub_date);
+
+  const sortedNews = useMemo(() => {
+    const filtredNews = news.sort((a, b) => b.pub_date - a.pub_date);
+
+    if (!skip) {
+      return filtredNews.slice(1, 5);
+    }
+
+    return filtredNews.slice(1, 10);
+  }, [news, skip]);
 
   return (
     <div className={styles.container}>
@@ -23,37 +32,35 @@ export default function MainNews({
       />
       <MainArticle
         categorie={"كأس الاتحاد الإنجليزي"}
-        title={sortedNews[0].title}
-        image={sortedNews[0].image.default_path}
-        description={sortedNews[0].image.title}
+        title={news[0].title}
+        image={news[0].image.default_path}
+        description={news[0].image.title}
+        key={0}
       />
       <div className={styles.subNews}>
         {sortedNews?.map((article, index) => {
-          if (index === 0 || index > 5) {
-            return null;
-          }
-
           return (
             <SubArticle
               categorie={"كأس الاتحاد الإنجليزي"}
               title={article.title}
               image={article.image.default_path}
+              key={index}
             />
           );
         })}
-
-        <div className={styles.buttonContainer}>
-          <hr className={styles.separator} />
-          <Button
-            title={"أظهر المزيد"}
-            icon={<i className="fi fi-br-angle-small-down" />}
-            style={{
-              color: "#5c2d91",
-              borderColor: "#5c2d91",
-            }}
-          />
-          <hr className={styles.separator} />
-        </div>
+      </div>
+      <div className={styles.buttonContainer}>
+        <hr className={styles.separator} />
+        {/* <Button
+          title={"أظهر المزيد"}
+          icon={<i className="fi fi-br-angle-small-down" />}
+          style={{
+            color: "#5c2d91",
+            borderColor: "#5c2d91",
+          }}
+          onClick={() => setSkip(!skip)}
+        /> */}
+        <hr className={styles.separator} />
       </div>
     </div>
   );

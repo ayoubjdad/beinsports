@@ -4,6 +4,8 @@ const endpoints = {
     "https://api.sofascore.com/api/v1/sport/football/scheduled-events/{date}",
   seasons:
     "https://api.sofascore.com/api/v1/config/unique-tournaments/{language}/football",
+  topUniqueTournaments:
+    "https://api.sofascore.com/api/v1/config/top-unique-tournaments/MA/football",
   categories: `https://api.sofascore.com/api/v1/sport/football/categories`,
   standings:
     "https://api.sofascore.com/api/v1/unique-tournament/{tournementId}/season/{seasonId}/standings/total",

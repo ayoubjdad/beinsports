@@ -1,31 +1,29 @@
 import React from "react";
 import styles from "./Tags.module.scss";
 import SectionHeader from "../../../layouts/SectionHeader/SectionHeader";
-
-export const Tag = ({ alias, logo, index }) => {
-  return (
-    <div key={index} className={styles.tag}>
-      {logo && (
-        <img src={logo} alt={alias} srcSet={logo} className={styles.logo} />
-      )}
-      <span>{alias}</span>
-    </div>
-  );
-};
+import Chip from "../../../components/chip/Chip";
 
 const staticTags = [
-  "دوري أبطال أوروبا",
-  "الدوري الإنجليزي الممتاز",
-  "الدوري الإسباني - لا ليجا",
-  "الدوري الفرنسي - ليج 1",
-  "الدوري الألماني - بوندسليجا",
-  //   "دوري أبطال آسيا",
-  //   "الدوري الأوروبي",
-  //   "الدوري الإيطالي - سيري آ",
-  //   "تصفيات كأس أوروبا",
-  //   "دوري أبطال أفريقيا",
-  //   "كأس آسيا قطر 2023",
-  //   "كأس أمم إفريقيا كوت ديفوار 2023 توتال إنيرجيز",
+  {
+    alias: "دوري أبطال أوروبا",
+    logo: "https://upload.wikimedia.org/wikipedia/fr/thumb/b/bf/UEFA_Champions_League_logo_2.svg/1067px-UEFA_Champions_League_logo_2.svg.png",
+  },
+  {
+    alias: "الدوري الإنجليزي",
+    logo: "https://banner2.cleanpng.com/20180711/vg/kisspng-201617-premier-league-english-football-league-l-lion-emoji-5b460f06eeac18.5589169115313180229776.jpg",
+  },
+  {
+    alias: "الدوري الإسباني",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/LaLiga_logo_2023.svg/1200px-LaLiga_logo_2023.svg.png",
+  },
+  {
+    alias: "الدوري الفرنسي",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/f/fb/Ligue1_logo.png",
+  },
+  {
+    alias: "الدوري الألماني",
+    logo: "https://upload.wikimedia.org/wikipedia/fr/b/b4/Logo_Bundesliga.png",
+  },
 ];
 
 export default function Tags({
@@ -46,17 +44,9 @@ export default function Tags({
         />
       )}
       <div className={styles.tags}>
-        {tags.map((tag, index) => {
-          return (
-            <Tag
-              alias={tag}
-              logo={
-                "https://prod-media.beinsports.com/image/34pl8szyvrbwcmfkuocjm3r6t.64.png?ver=06-02-2024"
-              }
-              index={index}
-            />
-          );
-        })}
+        {tags.map(({ alias, logo }, index) => (
+          <Chip title={alias} startIcon={logo} key={index} />
+        ))}
       </div>
     </div>
   );

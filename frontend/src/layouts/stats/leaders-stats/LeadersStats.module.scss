@@ -1,0 +1,58 @@
+.leadersStatsContainer {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid gray;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.title {
+  padding: 14px;
+}
+
+.leaderItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 7px 14px;
+
+  &:first-child {
+    border-top: none;
+  }
+
+  &.oddRow {
+    background-color: #f6f6f6;
+  }
+}
+
+.firstItem {
+  border-top: 1px solid gray;
+}
+
+.rank {
+  font-weight: 900;
+}
+
+.playerImage {
+  width: 40px;
+  object-fit: contain;
+  border: 1px solid gray;
+  border-radius: 50px;
+}
+
+.playerInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.playerName {
+  font-weight: 900;
+  font-size: 16px;
+}
+
+.goals {
+  font-weight: 900;
+  font-size: 24px;
+}

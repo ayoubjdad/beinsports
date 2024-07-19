@@ -1,0 +1,30 @@
+.container {
+  margin: 20px;
+  height: 344px;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 12px;
+  // background-color: linear-gradient(
+  //   0deg,
+  //   rgba(0, 0, 0, 0.82),
+  //   hsla(0, 0%, 9%, 0.722) 35%,
+  //   rgba(76, 76, 76, 0) 82%,
+  //   rgba(84, 84, 84, 0.051)
+  // );
+}
+
+.textContainer {
+  padding: 1.5rem;
+  display: flex;
+  align-content: space-between;
+  flex-wrap: wrap;
+  height: 86%;
+}
+
+.categorie {
+  display: flex;
+}
+
+.title {
+}

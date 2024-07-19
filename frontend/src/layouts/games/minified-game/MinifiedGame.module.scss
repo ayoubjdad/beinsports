@@ -1,0 +1,18 @@
+.container {
+  border: 1px solid gray;
+  display: flex;
+  align-items: center;
+  border-radius: 16px;
+  overflow: hidden;
+  padding: 4px 10px;
+  height: fit-content;
+  gap: 10px;
+}
+
+.score {
+  background-color: gray;
+  color: white;
+  border-radius: 16px;
+  padding: 0px 10px;
+  font-size: 16px;
+}
